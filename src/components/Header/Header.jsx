@@ -1,7 +1,8 @@
 export const Header=()=>{
     const customStyle = {
-        backgroundColor: 'rgb(156, 67, 49)', // Red
-        color: 'rgb(94, 40, 24)', // Blue
+        backgroundColor: 'rgb(156, 67, 49)', 
+        color: 'rgb(94, 40, 24)', 
+        padding:120
       };
     return <div style={customStyle}>
         <h1>Silk.</h1>
