@@ -1,3 +1,4 @@
+
 export const Header=()=>{
     const customStyle = {
         backgroundColor: 'rgb(156, 67, 49)', 
@@ -9,3 +10,4 @@ export const Header=()=>{
         <h4>Stylish. Modern. Yours.</h4>
     </div> 
 }
+
