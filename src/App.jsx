@@ -13,22 +13,14 @@ function App() {
 
   return (
     <>
-    <div>
     <NavBar/>
-    </div>
 
-    <div>
     <Header/>
-    </div>
-    <div>
+    
       <ItemListContainer greeting="This is an ItemListContainer"/>
-    </div>
-
-    <div>
+  
       <p>Esto es una prueba de contador</p>
       <Counter/>
-
-    </div>
     
     <div className='row m-5'>
 
@@ -45,23 +37,7 @@ function App() {
       </div>
 
 </div>
-
-{/* 
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        
-      </div> */}
-{/* 
-      <div className='row '>
-        
-        <div className='col-lg-4' >
-          <CardUser name="Nombre" description="caption" /> 
-        </div>
-
-      </div> */}
-      
+     
       
     </>
   )
