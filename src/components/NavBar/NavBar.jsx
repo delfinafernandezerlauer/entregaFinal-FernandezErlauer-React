@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { CartWidget } from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 
 
 const pages = ['Home', 'About', 'Catalog', 'Contact Us', 'Join the Team'];
@@ -110,23 +111,51 @@ const NavBar=()=>{
            
            {/*
            
-           
            para cambiar styles del navbar : aca abajo
            
-           
-           
-           
            */}
+
+
+
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'rgb(50,18,12)', display: 'block' }}
+            
+
+            
+          <Link to="/" style={{ textDecoration: 'none' }} >
+               <Button
+              key="Home"
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'rgb(50,18,12)', display: 'block' }}
               >
-                {page}
+                Home
               </Button>
-            ))}
+
+            </Link>
+
+
+            <Link to="/ContactUs" style={{ textDecoration: 'none' }} >
+               <Button
+              key="Contact Us"
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'rgb(50,18,12)', display: 'block' }}
+              >
+                Contact Us
+              </Button>
+
+            </Link>
+            
+            
+            <Link to="/About" style={{ textDecoration: 'none' }} >
+               <Button
+              key="About"
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'rgb(50,18,12)', display: 'block' }}
+              >
+                About
+              </Button>
+
+            </Link>
+
           </Box>
           <div>
             <CartWidget/>

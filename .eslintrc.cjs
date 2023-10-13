@@ -13,7 +13,7 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     "react/prop-types":"off",
-    "no-unused-vars":"warn", // este comando para que las no usadas las pinte en amarillo y no en rojo
+    "no-unused-vars":"off", // este comando para que las no usadas las pinte en amarillo y no en rojo
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },

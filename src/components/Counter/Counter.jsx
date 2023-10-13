@@ -13,7 +13,7 @@ export const Counter=()=>{
     }
 
     return <div>
-        <h4>{number}</h4>
+        <p>{number}</p>
         <button onClick={sumar} >+</button> 
         {/* en la eti de apertura, el evento. entre llaves el cod js (la fx) */}
         <button onClick={restar}>-</button> 

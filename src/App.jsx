@@ -5,41 +5,36 @@ import './App.css'
 import NavBar from './components/NavBar/NavBar';
 import { Header } from './components/Header/Header';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-import { Counter } from './components/Counter/Counter';
-import CardItem from './components/CardItem/CardItem';
+import { BrowserRouter, Route, Routes  } from 'react-router-dom';
+import { ContactUs } from './components/ContactUs/ContactUs';
+import { About } from './components/About/About';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   //const [count, setCount] = useState(0)
 
   return (
-    <>
-    <NavBar/>
-
-    <Header/>
+    <div>
+      <BrowserRouter>
+      <NavBar/>
     
-      <ItemListContainer greeting="This is an ItemListContainer"/>
-  
-      <p>Esto es una prueba de contador</p>
-      <Counter/>
+      <Header/>
+
+      <Routes>
+        
+        <Route path="/" element={<ItemListContainer/>} />
+        <Route path="/detail/:id" element={<ItemDetailContainer/>} /> 
+        <Route path="/ContactUs" element={<ContactUs/>}/> 
+        
+        <Route path="/About" element={<About/>}/> 
+        {/* el /item es lo que va a l final del link */}
+      </Routes>
+
+
     
-    <div className='row m-5'>
-
-      <div className='col-lg-4'> 
-      <CardItem name="a" talle="m" color="ne" precio="12" description="1aaaaaaaaaaaa"/>
-      </div>
-
-      <div className='col-lg-4'>
-      <CardItem name="b" talle="l" color="gr" precio="102" description="bbbbbb"/>
-      </div>
-
-      <div className='col-lg-4'>
-      <CardItem name="c" talle="H" color="o" precio="222" description="ccccccccc"/>
-      </div>
-
-</div>
+    </BrowserRouter>
+  </div>
      
-      
-    </>
   )
 }
 

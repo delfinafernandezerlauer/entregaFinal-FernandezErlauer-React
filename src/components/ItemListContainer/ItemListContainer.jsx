@@ -1,18 +1,15 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import data from "../../data/products.json"
+import { ItemList } from "../ItemList/ItemList";
+import { pedirProducts } from "../../helpers/pedirProducts";
 import { Counter } from "../Counter/Counter";
+import { Link } from "react-router-dom";
+
 
 export const ItemListContainer=()=>{
     
   const [products, setProducts]=useState([]);
 
-
-  const pedirProducts=()=>{
-    return new Promise((resolve, reject)=>{
-      resolve(data)
-    })
-  }
   useEffect(()=>{
       
     pedirProducts()
@@ -23,29 +20,33 @@ export const ItemListContainer=()=>{
 
   return (
   <div>
-    <h3 className="p-5">Products</h3>
-    <div className="row">
     
-    {products.length>0 && 
-   
-    products.map((product)=>{
-      return (
-        
-        <div key={product.id} className="col-lg-4 border p-4">
-          <h4>{product.name}</h4>
-          <img src={product.image} alt="" />
-          <p>${product.price}</p>
-          <p>talle: {product.talle}</p>
-          <p>color {product.color}</p>
-          <Counter/>
-        </div>
-      )
-    })
-    
-    }
-    
-    </div>
-    {/* aca agregar descripcion talle precio etc en un div separado */}
+    <div>
+            <div>
+                <h2>Productos</h2>
+            </div>
+                
+            <div className="row">
+
+                {products.length>0 && 
+
+                products.map((products)=>
+                <div key={products.id} className="col-lg-4 border p-4">
+                <img src={products.image} alt="" />
+                <h4 className="bold">{products.name}</h4>
+                <p>${products.price}</p>
+                <p>Size: {products.size}</p>
+                <p>color {products.color}</p>
+                <Counter/>
+              
+                <Link to={`/detail/${products.id}`}>Ver Mas</Link> 
+                
+        </div>    
+                )
+                }
+                </div>
+
+</div>
   </div>
   );
 }
