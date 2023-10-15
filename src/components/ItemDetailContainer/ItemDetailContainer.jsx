@@ -1,22 +1,24 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { pedirItemPorId } from "../../helpers/pedirProducts";
+import { pedirItemPorId, pedirProducts } from "../../helpers/pedirProducts";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 
 export const ItemDetailContainer = () => {
-  const { id } = useParams();
-  const [product, setProduct] = useState(null);
+  const id = useParams().id;
+  const [item, setItem] = useState(null);
+
 
   useEffect(() => {
-    pedirItemPorId(id)
-      .then((res) => {
-        setProduct(res);
-      });
+    pedirItemPorId(Number(id))
+    .then((res)=>{
+      setItem(res);
+    })
   }, [id]);
+  
 
   return (
     <div>
-      {product ? <ItemDetail product={product} /> : <p>Loading...</p>}
+      {item ? <ItemDetail item={item} /> : <p>Loading...</p>}
     </div>
   );
 };

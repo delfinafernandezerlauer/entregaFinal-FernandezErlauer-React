@@ -156,6 +156,54 @@ const NavBar=()=>{
 
             </Link>
 
+
+            <Link to="/products/shirts" style={{ textDecoration: 'none' }} >
+               <Button
+              key="Shirts"
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'rgb(50,18,12)', display: 'block' }}
+              >
+                Shirts
+              </Button>
+
+            </Link>
+
+            
+            <Link to="/products/pants" style={{ textDecoration: 'none' }} >
+               <Button
+              key="Pants"
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'rgb(50,18,12)', display: 'block' }}
+              >
+                Pants
+              </Button>
+
+            </Link>
+
+            
+            <Link to="/products/dresses" style={{ textDecoration: 'none' }} >
+               <Button
+              key="Dresses"
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'rgb(50,18,12)', display: 'block' }}
+              >
+                Dresses
+              </Button>
+
+            </Link>
+
+            
+            <Link to="/products/jackets" style={{ textDecoration: 'none' }} >
+               <Button
+              key="Jackets"
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'rgb(50,18,12)', display: 'block' }}
+              >
+                Jackets
+              </Button>
+
+            </Link>
+
           </Box>
           <div>
             <CartWidget/>

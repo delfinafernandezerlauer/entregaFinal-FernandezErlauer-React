@@ -10,16 +10,14 @@ export const  pedirProducts=()=>{
 }
 
 
+    
 export const pedirItemPorId = (id) => {
   return new Promise((resolve, reject) => {
-      
-      const product = data.find((el) => el.id === id);
-
-      if (product) {
-          resolve(product);
-      } else {
-          reject({
-              error: "No se encontró el producto"
-          })
-      }
-    })}
+    const item = data.find((el) => el.id === id);
+    if (item) {
+      resolve(item);
+    } else {
+      reject({ error: "No se encontró el producto" });
+    }
+  });
+};
