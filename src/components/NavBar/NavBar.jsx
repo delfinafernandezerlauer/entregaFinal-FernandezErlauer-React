@@ -208,6 +208,7 @@ const NavBar=()=>{
           <div>
             <CartWidget/>
           </div>
+          
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
