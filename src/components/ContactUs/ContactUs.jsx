@@ -10,12 +10,13 @@ export const ContactUs = ()=> {
    }
 
     return (
-    <div>
-        <form onSubmit={handleSubmit(enviar)} >
+    <div className="box">
+        <h2 className="main-title">Contact Us</h2>
+        <form className="formulario" onSubmit={handleSubmit(enviar)} >
             <input type="text"  placeholder="ingresa tu nombre"  {...register("nombre")}/>
             <input type="email" placeholder="ingresa tu email" {...register("email")} />
             <input type="phone" placeholder="ingresa tu telefono" {...register("telefono")}/>
-            <button type="submit"> Enviar</button>
+            <button className="enviar" type="submit"> Enviar</button>
         </form>
 
     </div>

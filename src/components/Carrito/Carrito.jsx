@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
+import { Link } from 'react-router-dom'
 
 const Carrito = () => {
 
@@ -9,13 +10,13 @@ const Carrito = () => {
     vaciarCarrito()
    }
   return (
-    <div>
-        <h2>
+    <div className='box'>
+        <h2 className='main-title'>
             Carrito
         </h2>
         <div>
            { carrito.map((prod)=>(
-            <div key={prod}>
+            <div className='column' key={prod}>
                 <h4 >{prod.name}</h4>
                 <p>Precio Unitario ${prod.price}</p>
                 <p>Precio total del Producto ${prod.price*prod.cantidad}</p>
@@ -27,10 +28,25 @@ const Carrito = () => {
         </div>
         <div>
             {carrito.length>0 ? 
-                <><h3>Precio Total de la compra: ${precioTotal()}</h3> 
-                <button onClick={handleVaciar}>Vaciar Carrito</button> </>
+            <div>
+                <div className='row'>
+                    <div className='col-lg-5'><h3>Precio Total de la compra: ${precioTotal()}</h3> </div>
+                </div>
+                <div className='row'>
+                    <div className='col-lg-2'>
+                        <button className='agregar-al-carrito' onClick={handleVaciar}>Vaciar Carrito</button>
+                    </div>
+                    <div className='col-lg-2'>
+                        <Link className='agregar-al-carrito'  to="/checkout">Finalizar Compra</Link>
+                    </div>
+                    <div className='col-lg-6'></div>
+                    
+                </div>  
+            </div>
+                
                 :
                 <h3>El carrito esta vacio :( Chusmea y empeza a agregar!</h3>
+
         }
             
         </div>

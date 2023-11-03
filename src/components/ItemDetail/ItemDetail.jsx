@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Counter } from '../Counter/Counter'
-import ItemCount from '../../ItemCount/ItemCount'
+import ItemCount from '../ItemCount/ItemCount'
 import {CartContext} from "../../context/CartContext"
 
 export const ItemDetail = ({item}) => {
@@ -28,25 +27,28 @@ export const ItemDetail = ({item}) => {
 
 
   return(
-    
-      <div className="row">
-{/* 
-        {product.map((products)=>{ */}
-            <div key={item.id} className="col-lg-4 border p-4">
-              <img src={item.image} alt="" />
-              <h4 className="bold">{item.name}</h4>
-              <p>${item.price}</p>
-              <p>Size: {item.size}</p>
-              <p>color {item.color}</p>
-              <p>descrition:{item.description}</p>
-              <ItemCount cantidad={cantidad} handleRestar={handleRestar} handleSumar={handleSumar}
-              handleAgregar={ ()=>{agregarAlCarrito(item, cantidad)}
-              }/>
-            </div> 
-            
-          {/* })
-} */}
-      </div>
+    <div  className='box'>
+      <div key={item.id} className="product-detail row">
+
+        <div className='col-lg-7 column'>
+          <h4 className="name">{item.name}</h4>
+          <img src={item.image} alt="" />
+        </div>
+
+        <div className='col-lg-5 column '>
+          <p className='price'>${item.price}</p>
+          <p  className='price' >Size: {item.size}</p>
+          
+          <p className='price'>Category: {item.category}</p>
+          <p className='price'>Color: {item.color}</p>
+          <p className='description'>Description: {item.description}</p>
+          
+          <ItemCount cantidad={cantidad} handleRestar={handleRestar} handleSumar={handleSumar}
+          handleAgregar={ ()=>{agregarAlCarrito(item, cantidad)}
+          }/>
+        </div>
         
-  
+       
+      </div> 
+    </div>
   )}

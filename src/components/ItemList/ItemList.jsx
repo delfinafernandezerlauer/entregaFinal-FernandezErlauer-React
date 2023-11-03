@@ -1,16 +1,14 @@
 import React from 'react'
-import { Counter } from '../Counter/Counter'
-import { Link } from 'react-router-dom'
 import Item from '../Item/Item'
 
 const ItemList = ({products, title}) => {
   return (
-    <div>
+    <div className='box'>
         <div>  
-            <h2>{title}</h2>
+            <h2 className='main-title'>{title}</h2>
         </div>
             
-        <div className="row">
+        <div className="products">
 
             {
             products.map((products)=> <Item products={products} key={products.id}/>

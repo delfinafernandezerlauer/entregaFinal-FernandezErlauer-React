@@ -48,7 +48,7 @@ const NavBar=()=>{
 
 
 
-    <AppBar position="static" sx={{backgroundColor:'rgb(105, 45, 33)', color:'rgb(50,18,12)'}} >
+    <AppBar position="static" sx={{backgroundColor:' rgb(225, 217, 209)', color:'rgb(50,18,12)'}} >
       <Container >
         <Toolbar disableGutters >
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />

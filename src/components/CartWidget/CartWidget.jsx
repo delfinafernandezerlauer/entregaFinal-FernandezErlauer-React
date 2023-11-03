@@ -19,27 +19,29 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     },
   }));
   
-// export const CartWidget=()=>{
-//     return (
-//         <IconButton aria-label="cart">
-//           <StyledBadge badgeContent={
-//             4
-//           } color="error">
-//             <ShoppingCartIcon />
-//           </StyledBadge>
-//         </IconButton>
-//       );
-// }
-
-export const CartWidget=()=>{
-
-  const {cantidadEnCarrito}=useContext(CartContext)
+ export const CartWidget=()=>{
+      const {cantidadEnCarrito}=useContext(CartContext)
   return (
-    <div>
-      <Link to="/carrito" >Carrito
-        <span> {cantidadEnCarrito()} </span>
-      </Link>
+    <Link className='menu-link' to="/carrito">
+      <IconButton aria-label="cart">
+        <StyledBadge badgeContent={cantidadEnCarrito()
+        } color="error">
+          <ShoppingCartIcon />
+        </StyledBadge>
+      </IconButton>
+    </Link>
+
+     )}
+
+// export const CartWidget=()=>{
+
+//   const {cantidadEnCarrito}=useContext(CartContext)
+//   return (
+//     <div>
+//       <Link className='menu-link' to="/carrito" >Carrito
+//         <span> {cantidadEnCarrito()} </span>
+//       </Link>
       
-    </div>
-    );
-}
+//     </div>
+//     );
+// }
