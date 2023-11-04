@@ -133,6 +133,7 @@ button:focus-visible {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   padding-block: 1rem;
+  grid-auto-rows: 1fr; 
 }
 
 .product {
@@ -140,6 +141,7 @@ button:focus-visible {
   flex-direction: column;
   border-radius: 1rem;
   overflow: hidden;
+  height: max-content
 }
 
 .product > div {
@@ -150,11 +152,14 @@ button:focus-visible {
   gap: .5rem;
 }
 
-.product > img {
-  width: 100%;
-  aspect-ratio: 2/1;
+.product > div > img {
+   
+  border-radius: 5%;
+  flex: 1;
   object-fit: cover;
-  border-radius: 50%;
+  max-width: 100%; 
+ 
+ 
 }
 
 .product .ver-mas {
