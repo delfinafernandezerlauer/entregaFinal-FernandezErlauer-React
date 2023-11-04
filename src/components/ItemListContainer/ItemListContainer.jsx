@@ -12,7 +12,7 @@ export const ItemListContainer=()=>{
     
   const [products, setProducts]=useState([]);
   const category = useParams().category
-  const [title,setTitle]=useState("Productos")
+  const [title,setTitle]=useState("Products")
 
   useEffect(()=>{
       

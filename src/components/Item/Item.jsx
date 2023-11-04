@@ -13,7 +13,7 @@ const Item = ({products}) => {
           <p>Color: {products.color}</p>
           <p>Category: {products.category}</p>
           
-          <Link className='ver-mas' to={`/detail/${products.id}`}>Ver Mas</Link>
+          <Link className='ver-mas' to={`/detail/${products.id}`}>Show me more</Link>
       </div>
         
     </div>
