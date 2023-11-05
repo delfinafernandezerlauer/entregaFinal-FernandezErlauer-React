@@ -14,6 +14,7 @@ export const ContactUs = ()=> {
         <h2 className="main-title">Contact Us</h2>
         <form className="formulario" onSubmit={handleSubmit(enviar)} >
             <input type="text"  placeholder="ingresa tu nombre"  {...register("nombre")}/>
+            <input type="text"  placeholder="ingresa tu apellido"  {...register("apellido")}/>
             <input type="email" placeholder="ingresa tu email" {...register("email")} />
             <input type="phone" placeholder="ingresa tu telefono" {...register("telefono")}/>
             <button className="enviar" type="submit"> Enviar</button>

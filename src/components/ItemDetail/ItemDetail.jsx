@@ -16,10 +16,8 @@ export const ItemDetail = ({item}) => {
 
     const handleSumar = () => {
 
-        //cantidad < item.stock && 
+        cantidad < item.stock && 
         setCantidad(cantidad + 1) 
-       
-        // aca queda cambair esto (agregar stock al json, desp descomentar)
     }
 
     
@@ -42,6 +40,7 @@ export const ItemDetail = ({item}) => {
           <p className='price'>Category: {item.category}</p>
           <p className='price'>Color: {item.color}</p>
           <p className='description'>Description: {item.description}</p>
+          <p className='stock'>Stock: {item.stock}</p>
           
           <ItemCount cantidad={cantidad} handleRestar={handleRestar} handleSumar={handleSumar}
           handleAgregar={ ()=>{agregarAlCarrito(item, cantidad)}
