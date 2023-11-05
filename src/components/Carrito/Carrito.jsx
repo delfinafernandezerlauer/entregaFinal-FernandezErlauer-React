@@ -18,9 +18,9 @@ const Carrito = () => {
            { carrito.map((prod)=>(
             <div className='column' key={prod}>
                 <h4 >{prod.name}</h4>
-                <p>Precio Unitario ${prod.price}</p>
-                <p>Precio total del Producto ${prod.price*prod.cantidad}</p>
-                <p>Cantidad: {prod.cantidad}</p>
+                <p>Price per unit ${prod.price}</p>
+                <p>Total price for product ${prod.price*prod.cantidad}</p>
+                <p>Units: {prod.cantidad}</p>
                 
             </div>
             
@@ -30,7 +30,7 @@ const Carrito = () => {
             {carrito.length>0 ? 
             <div>
                 <div className='row'>
-                    <div className='col-lg-5'><h3>Precio Total de la compra: ${precioTotal()}</h3> </div>
+                    <div className='col-lg-5'><h3>Total for this purchase: ${precioTotal()}</h3> </div>
                 </div>
                 <div className='row'>
                     <div className='col-lg-2'>

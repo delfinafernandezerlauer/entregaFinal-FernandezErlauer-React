@@ -211,7 +211,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-around ;
-  
+  gap: 1rem;
 }
 
 .item-count button, .agregar-al-carrito, .enviar {

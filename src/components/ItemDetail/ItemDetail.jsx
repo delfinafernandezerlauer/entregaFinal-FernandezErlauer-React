@@ -8,21 +8,15 @@ export const ItemDetail = ({item}) => {
 
   const [cantidad, setCantidad]=useState(0)
 
-    
     const handleRestar = () => {
         cantidad > 0 && setCantidad(cantidad - 1)
     }
-
 
     const handleSumar = () => {
 
         cantidad < item.stock && 
         setCantidad(cantidad + 1) 
     }
-
-    
-    
-
 
   return(
     <div  className='box'>
@@ -47,7 +41,6 @@ export const ItemDetail = ({item}) => {
           }/>
         </div>
         
-       
       </div> 
     </div>
   )}
