@@ -133,30 +133,6 @@ const NavBar=()=>{
             </Link>
 
 
-            <Link to="/ContactUs" style={{ textDecoration: 'none' }} >
-               <Button
-              key="Contact Us"
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'rgb(50,18,12)', display: 'block' }}
-              >
-                Contact Us
-              </Button>
-
-            </Link>
-            
-            
-            <Link to="/About" style={{ textDecoration: 'none' }} >
-               <Button
-              key="About"
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'rgb(50,18,12)', display: 'block' }}
-              >
-                About
-              </Button>
-
-            </Link>
-
-
             <Link to="/products/shirts" style={{ textDecoration: 'none' }} >
                <Button
               key="Shirts"

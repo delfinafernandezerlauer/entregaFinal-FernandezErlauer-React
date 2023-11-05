@@ -53,22 +53,23 @@ const Checkout = () => {
         <h3 className='main-title'>Checkout</h3>
     
         <div>
+            <p>Complete the form to continue with your purchase</p>
         <form className='formulario' onSubmit={handleSubmit(comprar)} >
-            <input type="text"  placeholder="add your name"  {...register("nombre")}/>
-            <input type="text"  placeholder="add your last name"  {...register("apellido")}/>
-            <input type="email" placeholder="add your email" {...register("email")} />
+            <input type="text"  placeholder="add your name"  {...register("nombre",{ required: true })}/>
+            <input type="text"  placeholder="add your last name"  {...register("apellido",{ required: true })}/>
+            <input type="email" placeholder="add your email" {...register("email",{ required: true })} />
 
             <input
                         type="email"
                         placeholder="confirma tu email"
-                        {...register('emailConfirmation')}
+                        {...register('emailConfirmation',{ required: true })}
                     />
                     {watch('email') !== watch('emailConfirmation') && (
                         <p className="error-message">Emails do not match</p>
                     )}
 
 
-            <input type="phone" placeholder="add your phone number" {...register("telefono")}/>
+            <input type="phone" placeholder="add your phone number" {...register("telefono",{ required: true })}/>
             <button className='enviar' type="submit">Complete purchase! </button>
         </form>
 
